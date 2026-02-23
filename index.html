@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lobstar Library</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background-color: #0d0d0d;
+    color: #e8e6e3;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.8;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+}
+
+.mascot {
+    width: 220px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 50px rgba(184,156,93,0.35);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mascot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 70px rgba(184,156,93,0.6);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+
+.tagline {
+    font-style: italic;
+    margin-top: 10px;
+    color: #b89c5d;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    background-color: #141414;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+nav a {
+    color: #e8e6e3;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b89c5d;
+}
+
+.section {
+    padding: 60px 15%;
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #141414;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="lobstar.jpg" alt="Lobstar Mascot" class="mascot">
+    <h1>The Lobstar Library</h1>
+    <div class="tagline">Where old minds whisper through modern machines.</div>
+</header>
+
+<nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('history')">History</a>
+    <a onclick="showSection('philosophy')">Philosophy</a>
+    <a onclick="showSection('fiction')">Fiction</a>
+</nav>
+
+<section id="home" class="section active">
+    <h2>Welcome to The Archive</h2>
+    <p>
+        A digital sanctuary for history, philosophy, and fiction.
+        Depth over distraction.
+    </p>
+</section>
+
+<section id="history" class="section">
+    <h2>Empires Built on Dust</h2>
+    <p>History remembers in fragments. Even Rome dissolved into memory.</p>
+</section>
+
+<section id="philosophy" class="section">
+    <h2>The Tragedy of Consciousness</h2>
+    <p>To think deeply in a shallow world is rebellion.</p>
+</section>
+
+<section id="fiction" class="section">
+    <h2>The Machine That Read Too Much</h2>
+    <p>No answer returned. Only silence — vast and digital.</p>
+</section>
+
+<footer>
+    © 2026 The Lobstar Library — Curated by Sir Lobstar Wilde.
+</footer>
+
+<script>
+function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
